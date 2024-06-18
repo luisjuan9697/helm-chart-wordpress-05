@@ -1,0 +1,18 @@
+namespace: nswordpress-helm
+storageClass: longhorn
+mysql:
+  name: mysql-wp-helm
+  persistentVolume:
+    size: 500Mi
+  imageTag: latest
+wordpress:
+  name: wordpress-helm
+  persistentVolume:
+    size: 500Mi
+  imageTag: php8.1-apache
+ingress:
+  host: stack-helm.mytoolings.xyz
+certManager:
+  email: lluisjuanguerrero@gmail.com
+clusterIssuer:
+  name: wp-prod-issuer-helm
