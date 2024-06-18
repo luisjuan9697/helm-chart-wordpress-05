@@ -7,7 +7,7 @@ Helm Chart to install k8s wordpress deployment
 
 
 # Quickstart
-
+```
 kubectl create namespace nswordpress-helm
 
 kubectl create secret generic mysql-password-f547bhm8mc --from-literal=password=Mysql.Root2021@ -n nswordpress-helm
@@ -17,3 +17,4 @@ kubectl create secret generic mysql-database-4f74mgddt5 --from-literal=database=
 
 helm create 
 helm install my-wordpress-helm ./ --namespace nswordpress-helm
+```
